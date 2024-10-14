@@ -6,72 +6,45 @@ import { ThemeProvider } from './theme-provider';
 export const dynamic = 'force-dynamic';
 
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children
 }: PropsWithChildren) {
   return (
     <html lang="en">
       <head>
         <title>
-          Horizon UI Boilerplate - Launch your startup project 10X in a few
-          moments - The best NextJS Boilerplate (This is an example)
+        Property Management Tool for STR - Streamline Web Check-Ins, Amenity Reservations, and More
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <!--  Social tags   --> */}
-        <meta
-          name="keywords"
-          content="Add here your main keywords and separate them with a comma"
-        />
-        <meta name="description" content="Add here your website description" />
-        {/* <!-- Schema.org markup for Google+ --> */}
-        <meta itemProp="name" content="Add here your website name / title" />
-        <meta
-          itemProp="description"
-          content="Add here your website description"
-        />
-        <meta
-          itemProp="image"
-          content="Add here the link for your website SEO image"
-        />
-        {/* <!-- Twitter Card data --> */}
-        <meta name="twitter:card" content="product" />
-        <meta
-          name="twitter:title"
-          content="Add here your website name / title"
-        />
-        <meta
-          name="twitter:description"
-          content="Add here your website description"
-        />
-        <meta
-          name="twitter:image"
-          content="Add here the link for your website SEO image"
-        />
-        {/* <!-- Open Graph data --> */}
-        <meta
-          property="og:title"
-          content="Add here your website name / title"
-        />
-        <meta property="og:type" content="product" />
+
+        {/* SEO Meta Tags */}
+        <meta name="keywords" content="property management, STR, short-term rentals, web check-in, amenity reservations, document management" />
+        <meta name="description" content="A comprehensive property management tool for Short-Term Rentals (STR), offering seamless web check-ins, admin assignment, parking rentals, amenity reservations, document management, guest tracking, and notifications." />
+
+        {/* Schema.org for Google */}
+        <meta itemProp="name" content="Property Management Tool for STR" />
+        <meta itemProp="description" content="A tool that streamlines property management for STR, featuring web check-ins, admin assignments, parking rentals, and more." />
+        <meta itemProp="image" content="https://your-website.com/img/seo-image.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Property Management Tool for STR - Streamline Web Check-Ins" />
+        <meta name="twitter:description" content="Manage STR properties with ease using web check-ins, amenity reservations, parking rentals, and more." />
+        <meta name="twitter:image" content="https://your-website.com/img/twitter-image.png" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Property Management Tool for STR - Web Check-Ins, Admin Assignments, and More" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://your-website.com" />
-        <meta
-          property="og:image"
-          content="Add here the link for your website SEO image"
-        />
-        <meta
-          property="og:description"
-          content="Add here your website description"
-        />
-        <meta
-          property="og:site_name"
-          content="Add here your website name / title"
-        />
+        <meta property="og:image" content="https://your-website.com/img/og-image.png" />
+        <meta property="og:description" content="A robust property management tool for STRs, with web check-ins, amenity reservations, document management, and more." />
+        <meta property="og:site_name" content="Property Management Tool for STR" />
+
+        {/* Canonical Link */}
         <link rel="canonical" href="https://your-website.com" />
         <link rel="icon" href="/img/favicon.ico" />
       </head>
-      <body id={'root'} className="loading bg-white">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body id="root" className="loading bg-white">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <SupabaseProvider>
             <main id="skip">{children}</main>
           </SupabaseProvider>

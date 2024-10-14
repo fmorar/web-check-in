@@ -143,3 +143,11 @@ input:checked.defaultCheckbox::before {
     --foreground: 240 10% 3.9%;
       }
 }
+
+
+.auth-bg {
+  background-image: url('/img/auth-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}

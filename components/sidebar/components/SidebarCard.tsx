@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import SidebarImage from '@/public/SidebarBadge.png';
 import Image from 'next/image';
+import Link from 'next/link'; 
 
 export default function SidebarDocs() {
   return (
@@ -23,14 +24,14 @@ export default function SidebarDocs() {
           Horizon AI Boilerplate PRO!
         </p>
       </div>{' '}
-      <a
+      <Link
         target="_blank"
         href="https://horizon-ui.com/boilerplate-shadcn#pricing"
       >
         <Button className="mt-auto flex h-full w-[200px] items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium">
           Get started with PRO
         </Button>
-      </a>
+      </Link>
     </div>
   );
 }

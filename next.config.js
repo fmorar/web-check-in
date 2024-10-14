@@ -1,12 +1,25 @@
 const nextConfig = {
-  reactStrictMode: false, // changed this to false
+  reactStrictMode: false, // It's fine to leave reactStrictMode off if needed
   images: {
-    domains: [
-      'images.unsplash.com',
-      'i.ibb.co',
-      'scontent.fotp8-1.fna.fbcdn.net',
-    ],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent.fotp8-1.fna.fbcdn.net',
+        port: '',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',

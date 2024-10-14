@@ -116,9 +116,6 @@ export default function Settings(props: Props) {
               <p className="text-xl font-extrabold text-zinc-950 leading-[100%] dark:text-white pl-4 md:text-3xl">
                 {props.user.user_metadata.full_name}
               </p>
-              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 md:mt-2 pl-4 md:text-base">
-                CEO and Founder
-              </p>
             </div>
           </Card>
           <Card

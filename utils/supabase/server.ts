@@ -10,17 +10,18 @@ export const createClient = () => {
     {
       cookies: {
         getAll() {
-          return cookieStore.getAll();
+          const allCookies = cookieStore.getAll();
+          //console.log('Cookies retrieved:', allCookies); // Debugging cookies
+          return allCookies;
         },
         setAll(cookiesToSet) {
           try {
+            //console.log('Setting cookies:', cookiesToSet); // Debugging cookies
             cookiesToSet.forEach(({ name, value, options }) => {
               cookieStore.set(name, value, options);
             });
           } catch (error) {
-            // The `set` method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
+            console.error('Failed to set cookies:', error);
           }
         }
       }
